@@ -86,6 +86,7 @@ Key Observations:
 
 
 <img width="503" alt="Screenshot 2025-02-24 at 22 42 47" src="https://github.com/user-attachments/assets/7d8e94e8-7a64-46bd-8fc0-ca196bd9b1bf" />
+
 This visualization highlights areas with significant changes in canopy height between 2019 and 2022.
 
 
