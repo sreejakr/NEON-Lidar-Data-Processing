@@ -40,6 +40,46 @@ Dark Green (Low Values) → Short vegetation or bare ground.
  
  <img width="685" alt="Screenshot 2025-02-24 at 19 50 43" src="https://github.com/user-attachments/assets/e195f678-08da-483f-a7f8-f92438fac7a0" />
 
+ # Project 1: Multi-Year Forest Change Detection (Before & After Analysis)
  
+1️) Download a second CHM dataset for comparison (e.g., 2022 or 2024).
+2) Load both CHM datasets into R.
+3) Compute forest height changes between the two years.
+4) Visualize and analyze forest gain & loss.
+
+<img width="683" alt="Screenshot 2025-02-24 at 22 11 07" src="https://github.com/user-attachments/assets/c28c2656-1b45-4c8a-be16-76b136b46db9" />
+
+From the Forest Height Change (2019-2022) Map, we observe:
+✅ Mostly Yellow Areas → Little to no change in tree height.
+✅ Green Areas → Tree height has decreased (deforestation, storm damage, logging).
+✅ Pink/Brown Areas → Possible height increase (regrowth, new tree growth).
+<img width="360" alt="Screenshot 2025-02-24 at 22 15 57" src="https://github.com/user-attachments/assets/1b1242a3-1103-4c12-951d-8c98177bbba5" />
+
+**Overall Change Statistics**
+1) "Average Canopy Height Change: 1.08 m"
+2) "Maximum Height Increase: 41.95 m"
+3) Maximum Height Decrease: -43.71 m"
  
+"Canopy Cover in 2019: 67.61 %"
+"Canopy Cover in 2022: 74.48 %"
+
+
+**Area of Forest Growth vs. Loss**
+1) "Forest Growth Area: 2.8 %"
+2) "Forest Loss Area: 0.73 %"
+
+
+<img width="503" alt="Screenshot 2025-02-24 at 22 42 47" src="https://github.com/user-attachments/assets/7d8e94e8-7a64-46bd-8fc0-ca196bd9b1bf" />
+This visualization highlights areas with significant changes in canopy height between 2019 and 2022.
+
+Green (-30 to -10 meters) → Large canopy height decrease (tree loss due to deforestation, storm damage, or human activity).
+Yellow (~0 meters) → No significant change in forest height.
+Brown/Beige (10 to 30 meters) → Tree growth 
+
+- The majority of the area remains yellow (~0m change), indicating stable canopy height.
+- Scattered green patches show tree height reductions (possible deforestation).
+- Scattered brown areas indicate tree height increases (regrowth or afforestation).
+- Sharp dips in the waveform align with deforested patches.
+- Peaks in the graph correspond to regions of high variation in forest height.
+
 
