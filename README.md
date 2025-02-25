@@ -7,6 +7,8 @@ LiDAR (Light Detection and Ranging)
 
 🔹 Each LiDAR point contains:
 
+We are filtering the dataset to show only the records related to the **BART (Bartlett Experimental Forest)** site.
+
 <img width="436" alt="Screenshot 2025-02-24 at 18 33 21" src="https://github.com/user-attachments/assets/b263260f-c1a0-4803-9cd3-97c63f3eaabd" />
 
 In this dataset, the LiDAR data is unclassified (Classification = 0 for all points).
