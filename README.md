@@ -1,5 +1,7 @@
 # NEON LiDAR Data Processing using R
 
+This script performs a Canopy Height Model (CHM) analysis using LiDAR data from the National Ecological Observatory Network (NEON). It downloads, processes, and analyzes CHM data from the Bartlett Experimental Forest (BART) site for 2019 and 2022, detecting forest height changes.
+
 ## What is LiDAR?
 LiDAR (Light Detection and Ranging) is a remote sensing technology that uses laser pulses to measure distances and create 3D point clouds of the environment.
 
