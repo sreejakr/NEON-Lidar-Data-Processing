@@ -15,17 +15,7 @@ We are filtering the dataset to show only the records related to the **BART (Bar
 
 In this dataset, the LiDAR data is unclassified (Classification = 0 for all points).
 
-Goal:
-
-Assign each LiDAR point to a category:
-
 <img width="300" alt="Screenshot 2025-02-24 at 18 34 32" src="https://github.com/user-attachments/assets/57583f6a-ca8e-4ee4-8e15-ae205f6850b7" />
-
-### Goal: Assign Each LiDAR Point to a Category
-- **Ground points (2)** → Needed for Digital Terrain Model (DTM)  
-- **Canopy points (5)** → Needed for Canopy Height Model (CHM)  
-- **Building points (6)** → Helps separate man-made structures  
-- **Water points (9)** → Helps in hydrological studies 
 
 ## Canopy Height Model (CHM)
 CHM represents the height of trees and vegetation above ground.
