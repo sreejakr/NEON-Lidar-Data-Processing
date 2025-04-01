@@ -34,8 +34,15 @@ NEON collects LiDAR data via aircraft and processes it into several products:
 > ```text
 > CHM = DSM - DTM
 > ```
-
->  This is a **pre-processed, rasterized** product — no need to classify point clouds or model terrain manually.
+> 
+>** What are the CHM tiles?**
+Each .tif file (like NEON_D01_BART_DP3_312000_4873000_CHM.tif) is a 1 km × 1 km raster tile of the Canopy Height Model for that location.
+NEON's AOP (Airborne Observation Platform) flies over a site and collects data tile by tile.
+Each tile has:
+ - Spatial extent (xmin, xmax, ymin, ymax)
+ - 1-meter resolution (i.e., 1000x1000 pixels)
+ - Tree height values at each pixel
+ - A coordinate reference system (UTM, usually)
 
 ---
 
