@@ -1,26 +1,64 @@
-# NEON LiDAR Data Processing using R
+# 🌲 NEON LiDAR Forest Monitoring with R
 
-This script performs a Canopy Height Model (CHM) analysis using LiDAR data from the National Ecological Observatory Network (NEON). It downloads, processes, and analyzes CHM data from the Bartlett Experimental Forest (BART) site for 2019 and 2022, detecting forest height changes.
+This repository analyzes multi-temporal **Canopy Height Model (CHM)** data from the **National Ecological Observatory Network (NEON)** to detect forest structural changes over time at the **Bartlett Experimental Forest (BART)** site.
 
-## What is LiDAR?
-LiDAR (Light Detection and Ranging) is a remote sensing technology that uses laser pulses to measure distances and create 3D point clouds of the environment.
+We use **processed CHM raster tiles** from 2019 and 2022 to assess **tree height change**, **canopy cover**, and **forest disturbance or recovery**.
 
-### Each LiDAR point contains:
-- **X, Y, Z coordinates** – Position in space  
-- **Intensity** – Strength of the return signal  
-- **Return Number** – Single or multiple returns per pulse  
-- **Classification** – Ground, vegetation, buildings, water, etc.  
+---
 
-We are filtering the dataset to show only the records related to the **BART (Bartlett Experimental Forest)** site.
+##  What is LiDAR?
 
-<img width="436" alt="Screenshot 2025-02-24 at 18 33 21" src="https://github.com/user-attachments/assets/b263260f-c1a0-4803-9cd3-97c63f3eaabd" />
+**LiDAR (Light Detection and Ranging)** is a remote sensing technique that uses laser pulses to generate 3D information about the Earth's surface.
 
-In this dataset, the LiDAR data is unclassified (Classification = 0 for all points).
+NEON collects LiDAR data via aircraft and processes it into several products:
+- **Point cloud (.LAZ)** – raw 3D laser returns
+- **DTM (Digital Terrain Model)** – ground elevation
+- **DSM (Digital Surface Model)** – top-of-everything elevation
+- **CHM (Canopy Height Model)** – vegetation height above ground
 
-<img width="300" alt="Screenshot 2025-02-24 at 18 34 32" src="https://github.com/user-attachments/assets/57583f6a-ca8e-4ee4-8e15-ae205f6850b7" />
+---
 
-## Canopy Height Model (CHM)
-CHM represents the height of trees and vegetation above ground.
+##  Dataset Description
+
+- **Dataset**: Ecosystem Structure – Canopy Height Model (CHM)  
+- **Product ID**: `DP3.30015.001`  
+- **Format**: Raster GeoTIFF (.tif)  
+- **Resolution**: 1-meter  
+- **Tile Size**: 1 km × 1 km  
+- **Years Used**: 2019 and 2022  
+- **Site**: BART (Bartlett Experimental Forest)  
+- **Source**: [NEON Data Portal](https://data.neonscience.org)
+
+> 🔁 Each CHM pixel represents **tree height (in meters)** above bare earth, calculated as:
+>
+> ```text
+> CHM = DSM - DTM
+> ```
+
+>  This is a **pre-processed, rasterized** product — no need to classify point clouds or model terrain manually.
+
+---
+
+## 🎯 Project Objectives
+
+1. **Visualize Canopy Height Models** for 2019 and 2022
+2. **Estimate Canopy Cover** (% of area with vegetation taller than threshold)
+3. **Detect Forest Change** over time (growth or loss)
+4. **Visualize Spatial Patterns** of canopy change
+5. **Quantify Areas** with significant forest recovery or disturbance
+
+---
+
+## 🛠️ R Packages Used
+
+- `neonUtilities` – download NEON AOP data
+- `raster`, `terra` – raster data handling
+- `lidR` – tree detection from CHM
+- `ggplot2` – visualizations
+- `rasterVis` – advanced raster plots
+- `sf` – spatial data support
+
+---
 
 - **Dark Green** = Short vegetation or bare ground  
 - **Yellow to Light Green** = Medium-height trees  
