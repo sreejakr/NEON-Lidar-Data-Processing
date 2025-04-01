@@ -35,7 +35,7 @@ NEON collects LiDAR data via aircraft and processes it into several products:
 > CHM = DSM - DTM
 > ```
 > 
->** What are the CHM tiles?**
+** What are the CHM tiles?**
 Each .tif file (like NEON_D01_BART_DP3_312000_4873000_CHM.tif) is a 1 km × 1 km raster tile of the Canopy Height Model for that location.
 NEON's AOP (Airborne Observation Platform) flies over a site and collects data tile by tile.
 Each tile has:
